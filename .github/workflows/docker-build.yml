@@ -1,5 +1,9 @@
 ## MOVE THIS FILE to `.github/workflows/docker-build.yaml` TO EXECUTE IT
 
+#        with:
+#          username: ${{ secrets.DOCKERHUB_USERNAME }}
+#          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
 # This is a basic workflow to help you get started with Actions
 
 name: python-helloworld
@@ -34,8 +38,8 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: leaherb
+          password: 5d848272-26f2-42ff-908b-19c3bd3814cf
       -
         name: Build and push
         uses: docker/build-push-action@v2
