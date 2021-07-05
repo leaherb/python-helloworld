@@ -3,6 +3,9 @@
 #        with:
 #          username: ${{ secrets.DOCKERHUB_USERNAME }}
 #          password: ${{ secrets.DOCKERHUB_TOKEN }}
+#       with:
+#          username: leaherb
+#          password: 5d848272-26f2-42ff-908b-19c3bd3814cf
 
 # This is a basic workflow to help you get started with Actions
 
@@ -38,8 +41,8 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
-          username: leaherb
-          password: 5d848272-26f2-42ff-908b-19c3bd3814cf
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and push
         uses: docker/build-push-action@v2
